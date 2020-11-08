@@ -58,9 +58,7 @@ let g:airline_theme='onehalfdark'
 
 " Configure NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd VimEnter * NERDTreeVCS
-autocmd VimEnter * wincmd p
-map <silent> <C-n> :NERDTreeFocus<CR>
+map <silent> <C-n> :NERDTreeToggleVCS<CR>
 
 " Remove trailing white spaces
 autocmd BufWritePre * %s/\s\+$//e
