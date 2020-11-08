@@ -1,0 +1,23 @@
+#!/usr/bin/sh
+
+if [[ -e ~/.vimrc ]]; then
+	echo "~/.vimrc already existing!" &2>1
+else
+	ln -s $(realpath .vimrc) $(realpath ~/.vimrc)
+fi
+
+mkdir -p ~/.vim ~/.vim/undo ~/.vim/swp ~/.vim/bundle
+
+if [[ -e ~/.vim/vundle.vim ]]; then
+	echo "~/.vim/vundle.vim already existing!" &2>1
+else
+	ln -s $(realpath vundle.vim) $(realpath ~/.vim/vundle.vim)
+fi
+
+if [[ -e ~/.vim/bundle/Vundle.vim ]]; then
+	echo "~/.vim/bundle/Vundle.vim already existing!" &2>1
+else
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+vim -u ~/.vim/vundle.vim +PluginInstall +qall

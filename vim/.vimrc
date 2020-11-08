@@ -1,23 +1,11 @@
-set nocompatible
-filetype off
+" Load Vundle configuration
+source ~/.vim/vundle.vim
 
 if exists('+termguicolors')
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 	set termguicolors
 endif
-
-" Set-up Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
-" Install plugins
-Plugin 'vim-airline/vim-airline'
-Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-Plugin 'preservim/nerdtree'
-Plugin 'editorconfig/editorconfig-vim'
-call vundle#end()
 
 " Enable project specific vimrc file
 set exrc
@@ -48,9 +36,6 @@ set nowritebackup
 " Enable undo files
 set undofile
 set undodir=$HOME/.vim/undo//
-
-" Enable file type detection
-filetype plugin indent on
 
 " Enable syntax higlighting
 syntax on
