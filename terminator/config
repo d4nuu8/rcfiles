@@ -1,6 +1,6 @@
 [global_config]
   enabled_plugins = ,
-profiles]
+[profiles]
   [[default]]
     background_color = "#fafafa"
     background_darkness = 0.85
