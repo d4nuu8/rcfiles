@@ -45,6 +45,10 @@ set directory=$HOME/.vim/swp//
 set nobackup
 set nowritebackup
 
+" Enable undo files
+set undofile
+set undodir=$HOME/.vim/undo//
+
 " Enable file type detection
 filetype plugin indent on
 
