@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+mkdir -p ~/.config/terminator
+
+if [[ -e ~/.config/terminator/config ]]; then
+	echo "~/.config/terminator/config already existing!" &2>1
+else
+	ln -s $(realpath config) $(realpath ~/.config/terminator/config)
+fi
