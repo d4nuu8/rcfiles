@@ -22,6 +22,7 @@ call vundle#end()
 
 " Enable project specific vimrc file
 set exrc
+set secure
 
 " Automatically re-read files if unmodified
 set autoread
