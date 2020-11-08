@@ -26,6 +26,10 @@ set shiftwidth=4
 set softtabstop=4
 set cinoptions=(0,u0,U0
 
+" Configure search
+set smartcase
+set incsearch
+
 " Change swap file location
 set directory=$HOME/.vim/swp//
 
