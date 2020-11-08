@@ -1,0 +1,14 @@
+#!/usr/bin/sh
+
+if [[ -e ~/.zshrc ]]; then
+	echo "~/.zshrc already existing!" &2>1
+else
+	ln -s $(realpath .zshrc) $(realpath ~/.zshrc)
+fi
+
+if [[ -e ~/.oh-my-zsh ]]; then
+	echo "~/.oh-my-zsh already existing!" &2>1
+else
+	export KEEP_ZSHRC=yes
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
