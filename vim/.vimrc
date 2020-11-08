@@ -25,6 +25,7 @@ set exrc
 
 " Automatically re-read files if unmodified
 set autoread
+autocmd CursorHold * checktime
 
 " Show line numbers
 set number
