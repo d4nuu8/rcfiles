@@ -17,7 +17,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'preservim/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'vim-scripts/Smart-Tabs'
 call vundle#end()
 
 " Enable project specific vimrc file
