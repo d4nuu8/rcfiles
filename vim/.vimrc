@@ -27,6 +27,7 @@ set softtabstop=4
 set cinoptions=(0,u0,U0
 
 " Configure search
+set ignorecase
 set smartcase
 set incsearch
 
